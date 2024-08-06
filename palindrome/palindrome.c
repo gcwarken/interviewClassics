@@ -1,3 +1,5 @@
+// Palindrome algorithm - c implementation
+
 #include <stdio.h>
 #include <string.h>
 
