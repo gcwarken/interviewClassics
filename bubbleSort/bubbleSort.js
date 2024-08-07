@@ -2,20 +2,30 @@
 
 function bubbleSort(arr) {
     let i, j, temp;
+    let passes = 0;
+    let comparisons = 0;
+    let swap = true
     
     console.log(`Original array: ${arr}`);
 
-    for (i = 0; i < arr.length; i++) {
+    i = 0
+    while (i < arr.length && swap) {
+        swap = false;
         for (j = 0; j < arr.length - i-1; j++) {
             if (arr[j] > arr[j+1]) {
                 temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
+                swap = true;
             }
+            comparisons++
         }
+        passes++;
+        i++;
     }
 
     console.log(`Sorted array: ${arr}`);
+    console.log(`${comparisons} comparisons in ${passes} passes.`)
 }
 
-bubbleSort([5,1,8,2,7,6,3,0,4])
+bubbleSort([1,4,2,3,0,5,6,7,8])
