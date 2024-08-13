@@ -25,7 +25,6 @@ def reverseStringWords(myString):
 
     return reversedWords            
 
-
 s = "the words of this sentence are reversed"
 
 print(f"Original sring: {s}")
