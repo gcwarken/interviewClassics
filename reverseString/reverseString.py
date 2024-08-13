@@ -2,10 +2,8 @@
 
 def reverseString(s):
     reverse = ""
-
     for i in range(len(s)):
         reverse = reverse + s[len(s)-i-1]
-
     return reverse
 
 def reverseStringWords(myString):
@@ -23,9 +21,22 @@ def reverseStringWords(myString):
         else:
             j = j + 1
 
-    return reversedWords            
+    return reversedWords
+
+## A better approach
+def betterReverseStringWords(s):
+    reversedWords = ""
+    j = len(s)
+    for i in range(len(s)-1, -1, -1):
+        if (s[i] == " "):
+            reversedWords = reversedWords + s[i+1:j] + " "
+            j = i
+        elif (i == 0):
+            reversedWords = reversedWords + s[i:j]
+
+    return reversedWords
 
 s = "the words of this sentence are reversed"
 
 print(f"Original sring: {s}")
-print(f"String with words reversed: {reverseStringWords(s)}")
+print(f"String with words reversed: {betterReverseStringWords(s)}")
