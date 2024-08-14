@@ -14,7 +14,7 @@ function reverseStringWords(s){
     return reversedWords;
 }
 
-let s = "the words of this sentence are reversed"
+let s = "never gonna give you up"
 
 console.log(`Original string: ${s}`);
 console.log(`String with words reversed: ${reverseStringWords(s)}`);

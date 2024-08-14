@@ -36,7 +36,7 @@ def betterReverseStringWords(s):
 
     return reversedWords
 
-s = "the words of this sentence are reversed"
+s = "never gonna give you up"
 
 print(f"Original sring: {s}")
 print(f"String with words reversed: {betterReverseStringWords(s)}")
