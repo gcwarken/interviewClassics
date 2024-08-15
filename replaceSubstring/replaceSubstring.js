@@ -1,0 +1,1 @@
+// Given a string S, find all substrings S1 and replace by string S2 - javascript implementation
