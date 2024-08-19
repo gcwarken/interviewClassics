@@ -29,6 +29,30 @@ def findReplace(originalString, find, replace):
 
     return newString
 
+## A better aproach
+
+def betterFindReplace(originalString, find, replace):
+    newString = ""
+    i = 0
+    j = 0
+
+    while (i < len(originalString) - len(find)):
+        while (j < len(find) and originalString[i + j] == find[j]):
+            j += 1
+
+        if (j == len(find)):
+            newString += replace
+            i += j
+        else:
+            newString += originalString[i]
+            i +=1
+
+        j = 0
+
+    newString += originalString[i:]
+    return newString
+
+
 myString = "They're taking the hobbits to Isengard."
 f = "hobbits"
 r = "orcs"
@@ -36,4 +60,4 @@ r = "orcs"
 print(f"Original string: {myString}")
 print(f"Find substring: {f}")
 print(f"Replace with: {r}")
-print(f"New string: {findReplace(myString, f, r)}")
+print(f"New string: {betterFindReplace(myString, f, r)}")
