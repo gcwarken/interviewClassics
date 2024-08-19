@@ -27,4 +27,7 @@ let myString = "They're taking the hobbits to Isengard.";
 let f = "hobbits";
 let r = "orcs";
 
-console.log(findReplace(myString, f, r));
+console.log(`Original string: ${myString}`);
+console.log(`Find substring: ${f}`);
+console.log(`Replace with ${r}`)
+console.log(`New string: ${findReplace(myString, f, r)}`);
