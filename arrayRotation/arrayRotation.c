@@ -48,5 +48,8 @@ int main() {
         printf("%d ", rotatedArray[i]);
     }
 
+    free(myArray);
+    free(rotatedArray);
+    
     return 0;
 }
