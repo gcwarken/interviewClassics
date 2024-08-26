@@ -1,4 +1,5 @@
 # Given a string, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.
+# Python implementation
 
 def repPattern(s):
     half = len(s) // 2
