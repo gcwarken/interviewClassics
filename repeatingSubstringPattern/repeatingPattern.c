@@ -9,6 +9,10 @@
         int subPatLength, j;
         int isRepeat = 0; // 0 = false
 
+        if (strlen(s) == 1) {
+            isRepeat++;
+        }
+
         subPatLength = strlen(s) / 2;
         while (subPatLength > 0  && !isRepeat) {
             if (strlen(s) % (subPatLength) == 0) {
