@@ -6,6 +6,8 @@ function repPattern(s){
     let intHalf = (s.length - (s.length % 2)) / 2;
     let subPat = s.slice(0,intHalf);
 
+    if (s.length === 1) {return true};
+
     for (i = intHalf; i >= 0; i--) {
         if (s.length % subPat.length == 0) {
             while (j < s.length && s[j] == subPat[j % subPat.length]) {

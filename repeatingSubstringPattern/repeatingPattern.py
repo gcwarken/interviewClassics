@@ -6,6 +6,8 @@ def repPattern(s):
     subPat = s[0:half]
     j = 0
 
+    if len(s) == 1: return True
+
     for i in range(half, 1, -1):
         if len(s) % len(subPat) == 0:
             while ( j < len(s) and s[j] == subPat[j % len(subPat)]):
