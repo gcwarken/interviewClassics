@@ -3,3 +3,11 @@
 // characters and without changing the relative order of the remaining characters.
 // Ex.: input "AABEBCDD" => longest repeating subsequence ABD - length 3
 // Javascript implementation
+
+function longestSubseq(s) {
+    return s;
+}
+
+
+let myString = "AABEBCDD";
+console.log(longestSubseq(myString));
